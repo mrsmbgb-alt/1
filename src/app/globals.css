@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+/* Ad Container Styles */
+.ad-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+}
+
+/* Responsive Ad Display */
+.ad-desktop {
+  display: none;
+}
+
+.ad-tablet {
+  display: none;
+}
+
+.ad-mobile {
+  display: none;
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+  .ad-desktop {
+    display: block;
+  }
+}
+
+/* Tablet (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .ad-tablet {
+    display: block;
+  }
+}
+
+/* Mobile (below 768px) */
+@media (max-width: 767px) {
+  .ad-mobile {
+    display: block;
+  }
+}
+
+/* Ensure ad scripts don't break layout */
+.ad-container iframe,
+.ad-container ins {
+  max-width: 100%;
+}
+
+/* Article content styling */
+.prose {
+  max-width: 65ch;
+}
+
+.prose p {
+  margin-bottom: 1.25em;
+  line-height: 1.75;
+}
+
+.prose h2 {
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.prose h3 {
+  margin-top: 1.6em;
+  margin-bottom: 0.6em;
+}
+
+.prose ul,
+.prose ol {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  padding-left: 1.625em;
+}
+
+.prose li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Admin panel styles */
+.admin-form input[type="text"],
+.admin-form input[type="password"],
+.admin-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
