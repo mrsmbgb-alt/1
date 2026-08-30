@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: canada-easy-guide-api
+    runtime: node
+    plan: free
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: FRONTEND_URL
+        value: https://canadaeasyguide.pages.dev
+      - key: NODE_ENV
+        value: production
+    buildCommand: npm install && npm run build
+    startCommand: npm start
